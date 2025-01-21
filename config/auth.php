@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'volunteerGuard'=>[
+            'driver'=>'session',
+            'provider'=>'volunteerProvider',
+        ]
     ],
 
     /*
@@ -64,6 +68,10 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
+        'volunteerProvider'=>[
+            'driver'=>'eloquent',
+            'model'=>env('AUTH_MODEL',App\Models\Create::class)
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -97,6 +105,7 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        
     ],
 
     /*
