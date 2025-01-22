@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\CrisisController as FrontendCrisisController;
 use App\Http\Controllers\Frontend\DonarController as FrontendDonarController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\ShelterController as FrontendShelterController;
+use App\Http\Controllers\Frontend\SslCommerzPaymentController as FrontendSslCommerzPaymentController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\VolunteerController as FrontendVolunteerController;
 use App\Http\Controllers\LocationController;
@@ -50,10 +51,10 @@ use App\Http\Controllers\SslCommerzPaymentController;
 
 
     //ssl commerz
-    Route::post('/success', [SslCommerzPaymentController::class, 'success']);
-    Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
-    Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-    Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+    Route::post('/success', [FrontendSslCommerzPaymentController::class, 'success']);
+    Route::post('/fail', [FrontendSslCommerzPaymentController::class, 'fail']);
+    Route::post('/cancel', [FrontendSslCommerzPaymentController::class, 'cancel']);
+    Route::post('/ipn', [FrontendSslCommerzPaymentController::class, 'ipn']);
     //SSLCOMMERZ END
 
 

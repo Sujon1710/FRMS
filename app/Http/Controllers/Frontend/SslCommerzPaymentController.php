@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
-use DB;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Library\SslCommerz\SslCommerzNotification;
+use Illuminate\Container\Attributes\DB;
+use Illuminate\Http\Request;
 
 class SslCommerzPaymentController extends Controller
 {
@@ -289,3 +290,5 @@ class SslCommerzPaymentController extends Controller
     }
 
 }
+
+
